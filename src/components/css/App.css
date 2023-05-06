@@ -1,0 +1,299 @@
+/* ? Navbar */
+.header {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3) !important;
+  justify-content: space-between;
+}
+.header-left {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-wrapper {
+  display: flex;
+  flex-direction: row !important;
+  gap: var(--spacing-2);
+}
+.header-logo {
+  width: 36px;
+  height: 36px;
+}
+
+/* ? Footer */
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-1);
+}
+.footer::after {
+  content: "";
+  height: 100%;
+  width: 200%;
+  left: -50%;
+  position: absolute;
+  background-color: var(--clr-accent-300);
+  z-index: -1;
+}
+.footer-logo img {
+  height: 28px !important;
+}
+.footer-tag {
+  font-weight: var(--fw-medium) !important;
+}
+.footer p {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-bold);
+}
+/* ? =================================> Home Page <================================= */
+
+/* ? HeroBanner */
+.hero-banner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+.hero-banner:first-child {
+  display: flex;
+  align-items: center;
+}
+.hero-banner div {
+  flex: 1;
+}
+.hero-banner--text {
+  font-size: var(--fs-4) !important;
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-bold) !important;
+}
+.hero-banner-img {
+  object-fit: cover;
+  object-position: center;
+  width: 700px;
+  height: 900px;
+  margin-top: -180px;
+}
+.hero-banner--bg_text {
+  font-size: calc(var(--fs-d1) * 2) !important;
+  font-weight: var(--fw-bold) !important;
+  color: var(--clr-primary-400);
+  opacity: 0.1;
+  position: absolute;
+  bottom: -10rem;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ? SearchExercises */
+.search-exercises {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.search-text_field {
+  background-color: var(--clr-white);
+}
+.search-btn {
+  padding: 16.5px 20px;
+  border-radius: 4px;
+}
+
+/* ? HorizontalScrollBar */
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll-bar_icons {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.bodyPart-card {
+  margin-block-start: 3rem;
+  margin-block-end: 5rem;
+  border-radius: 0.5rem;
+  margin-right: var(--spacing-2);
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--clr-white);
+  width: 220px;
+  height: 220px;
+  padding: 5rem;
+}
+.bodyPart-card:hover {
+  background: #eee;
+}
+.bodyPart-card_text {
+  white-space: nowrap !important;
+  font-weight: var(--fw-medium) !important;
+  text-transform: uppercase;
+}
+.MuiBox-root {
+  position: relative;
+}
+.right-arrow,
+.left-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  z-index: 10;
+  width: 36px;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+.right-arrow {
+  right: 3rem;
+}
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.05, 1.05);
+}
+
+/* ? ExerciseCard */
+.exercise-card_wrapper {
+  gap: var(--spacing-2);
+}
+.exercise-card {
+  display: block;
+  border: 1px solid var(--clr-black);
+  width: 240px;
+  flex-wrap: wrap;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+  border-radius: 4px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.exercise-card:hover {
+  transform: scale(1.02, 1.02);
+}
+.exercise-card-details {
+  padding: 1rem;
+}
+.exercise-card img {
+  width: 100%;
+}
+.exercise-tag-wrapper {
+  display: flex;
+  flex-direction: row !important;
+  gap: calc(var(--spacing-1) / 2);
+  padding-block-end: 1rem;
+}
+.exercise-tag-wrapper button {
+  border: 1px solid var(--clr-accent-500);
+  background-color: #dddddd !important;
+  white-space: nowrap;
+  width: fit-content;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--clr-black);
+  font-weight: var(--fw-medium);
+  padding: 4px 8px;
+}
+.exercise-name {
+  font-weight: var(--fw-medium);
+  text-transform: capitalize;
+}
+/* ? Pagination */
+.pagination {
+  display: grid !important;
+  place-content: center !important;
+  padding-block: var(--spacing-5);
+}
+
+/* ? =================================> ExerciseDetail Page <================================= */
+
+/* ? Detail Section */
+.detail-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--spacing-2);
+}
+.detail-image {
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  border: 1px solid var(--clr-accent-500);
+}
+.detail-title {
+  text-transform: capitalize;
+}
+.extra-detail-container {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--spacing-1);
+}
+.extra-detail-image {
+  width: 70px;
+  aspect-ratio: 1/1 !important;
+  padding: 1rem !important;
+  background-color: var(--clr-primary-300) !important;
+  border-radius: 100vw !important;
+}
+.extra-detail-container h6 {
+  text-transform: capitalize;
+  font-weight: var(--fw-medium);
+}
+
+/* ? Exercise Video Section */
+.exercise-extra-title {
+  font-weight: var(--fw-medium) !important;
+}
+.exercise-extra-title span {
+  font-size: var(--fs-4);
+  color: var(--clr-black);
+  font-weight: var(--fw-bold);
+  text-transform: capitalize;
+  text-transform: uppercase;
+}
+.exercise-video-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  gap: var(--spacing-2);
+}
+.exercise-video {
+  display: grid;
+  width: 280px;
+}
+.exercise-video img {
+  object-fit: cover;
+}
+.exercise-video h5 {
+  padding-block: 10px 0px;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-6);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.exercise-video h6 {
+  font-weight: var(--fw-regular);
+  display: -webkit-box;
+  font-size: var(--fs-small);
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow: auto !important;
+  gap: var(--spacing-1);
+}
+.css-gymcob-MuiStack-root {
+  padding: 0 !important;
+  padding-block-end: 2.5rem !important;
+}
